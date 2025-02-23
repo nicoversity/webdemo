@@ -17,7 +17,10 @@
         <link rel="stylesheet" href="styles.css">
 
         <!-- FontAwesome: https://docs.fontawesome.com/web/setup/host-yourself/webfonts -->
-        <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css"> 
+        <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+        
+        <!-- external JavaScript references -->
+        <script src="scripts.js"></script>
     </head>
     
     <body class="grid-container">
@@ -68,7 +71,7 @@
         </main>
 
         <div class="site-photos">
-            <img src="media/01-interactable.jpg" alt="A screenshot from within a Virtual Reality environment.">
+            <img src="media/01-interactable.jpg" alt="A screenshot from within a Virtual Reality environment." onclick="imageSwitch(this)">
             <img src="media/03-augmented_reality.jpg" alt="A user interacting with an Augmented Reality application.">
             <img src="media/04-mindstorms.jpg" alt="A prototype based on the Lego Mindstorms toolkit.">
         </div>
