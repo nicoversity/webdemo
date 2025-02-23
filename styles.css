@@ -1,0 +1,152 @@
+/*
+ *   Filename: styles.css
+ *  Description: A simple web page used to accompany the development of a beginner's guide to Git and GitHub with Visual Studio code.
+ *
+ *   Author: Nico Reski
+ *  Version: 2025-02-22
+ *   GitHub: https://github.com/nicoversity
+ */
+
+/* --- FONT related rulesets --- */
+/* Google Fonts: https://fonts.google.com/ */
+/* Indie Flower: https://fonts.google.com/specimen/Indie+Flower */
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('fonts/Indie_Flower/IndieFlower-Regular.ttf');
+}
+
+.font-indieflower {
+    font-family: 'Indie Flower', serif;
+}
+
+/* --- GRID related rulesets --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 750px 250px;
+    /* grid-template-columns: 3fr 1fr; */
+    grid-template-areas: 
+        'header header'
+        'nav nav'
+        'main photos'
+        'footer footer';
+    row-gap: 8px;
+    column-gap: 8px;
+    justify-content: center;
+}
+
+.site-header {
+    grid-area: header;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f78b4;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-navigation {
+    grid-area: nav;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f78b4;
+    text-align: center;
+    padding: 8px;
+}
+
+.site-main {
+    grid-area: main;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f78b4;
+    padding: 10px;
+    padding: 8px;
+}
+
+.site-main h2 {
+    font: italic small-caps bold 16px sans-serif;
+}
+
+.site-photos {
+    grid-area: photos;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f78b4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-photos img {
+    max-width: 200px;
+    margin-bottom: 8px;
+}
+
+.site-photos img:last-child {
+    margin-bottom: 0px;
+}
+
+.site-footer {
+    grid-area: footer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1f78b4;
+    text-align: center;
+    padding: 8px;
+}
+
+/* --- FLEXBOX related rulesets --- */
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item-small {
+    flex: 1;
+}
+
+.footer-flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* --- MISCELLANEOUS styling and formatting --- */
+.flexbox-container a {
+    padding: 8px 4px 8px 4px;
+    background-color: #b2df8a;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1f78b4;
+    border-radius: 8px;
+}
+
+.flexbox-container a:hover,
+.footer-flexbox-container a:hover {
+    background-color: #a6cee3;
+}
+
+/* --- RESPONSIVE related rulesets --- */
+@media (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'photos'
+            'footer';
+    }
+
+    .site-photos img {
+        max-width: 100%;
+    }
+
+    .flexbox-container {
+        flex-direction: column;
+    }
+
+    .footer-flexbox-container {
+        flex-direction: column;
+    }
+}
